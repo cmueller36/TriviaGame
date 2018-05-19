@@ -1,0 +1,41 @@
+body{
+    background-image: url(../images/marvel2.jpg);
+    background-repeat: none;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+}
+
+#trivia-title{
+    width: 100%;
+    margin-top: 10%;
+}
+
+.card-body{
+    font-family: 'Raleway', sans-serif;
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+#main-body{
+    vertical-align: middle;
+    width: 100%;
+    justify-content: center;
+    display: flex;
+}
+
+.jumbotron{
+    width: 100%;
+    height: 100%;
+    margin-top: 5%;
+    background-image: url(../images/marvel3.jpg);
+    color: white;
+
+}
+
+#questionsheet{
+    margin-top: 10%;
+}
+
+

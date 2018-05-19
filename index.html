@@ -1,12 +1,184 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Trivia Game</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="assets/css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+    <link href="https://fonts.googleapis.com/css?family=Raleway:400,700" rel="stylesheet">
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+
+
+
 </head>
+
 <body>
-    
+
+    <div class="container">
+        <!--Header-->
+        <div class="row">
+            <div class="card" id="trivia-title">
+                <div class="card-body">
+                    Avengers Trivia
+                </div>
+            </div>
+            <br>
+            <div class="jumbotron">
+                <!--start button-->
+                <div class="row">
+                    <div class="col-md-12" id="main-body">
+                        <button id="start-btn" type="button" class="btn btn-secondary">Start</button>
+                    </div>
+                </div>
+                <!--timer-->
+                <div class="row">
+                    <div class="col-md-12">
+                        <div id="timer">
+                            <h4>Count Down:</h4>
+                            <h3>30</h3>
+                        </div>
+                    </div>
+                </div>
+                <!--results-->
+                <div class="row">
+                    <div class="col-md-12">
+                        <div id="results">Correct Answers:  </div>
+                    </div>
+                </div>
+                <!--form-->
+                <div class="row" id="questionsheet">
+                    <div class="col-md-12">
+                        <form id="form1">
+                            <h3>In what year was the first Marvel Avenger movie released?</h3>
+                            <br>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="inlineRadioOptions" onclick="q1Function(this.value)" id="inlineRadio1" value="2010">
+                                <label class="form-check-label" for="inlineRadio1">2010</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="inlineRadioOptions" onclick="q1Function(this.value)" id="inlineRadio2" value="2012">
+                                <label class="form-check-label" for="inlineRadio2">2012</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="inlineRadioOptions" onclick="q1Function(this.value)" id="inlineRadio3" value="2011">
+                                <label class="form-check-label" for="inlineRadio1">2011</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="inlineRadioOptions" onclick="q1Function(this.value)" id="inlineRadio4" value="2009">
+                                <label class="form-check-label" for="inlineRadio2">2009</label>
+                            </div>
+                        </form>
+                        <br>
+                        <form id="form2">
+                            <h3>What is Thor the God of?</h3>
+                            <br>
+                            <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" onclick="q2Function(this.value)" id="inlineRadio1" value="Thunder">
+                                    <label class="form-check-label" for="inlineRadio1">Thunder</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" onclick="q2Function(this.value)" id="inlineRadio2" value="Clouds">
+                                    <label class="form-check-label" for="inlineRadio2">Clouds</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" onclick="q2Function(this.value)" id="inlineRadio3" value="Lightning">
+                                    <label class="form-check-label" for="inlineRadio1">Lightning</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" onclick="q2Function(this.value)" id="inlineRadio4" value="Rainbows">
+                                    <label class="form-check-label" for="inlineRadio2">Rainbows</label>
+                                </div>
+                        </form>
+                        <br>
+                        <form id="form3">
+                            <h3>Who is Tony Stark?</h3>
+                            <br>
+                            <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" onclick="q3Function(this.value)" id="inlineRadio1" value="Iron Man">
+                                    <label class="form-check-label" for="inlineRadio1">Iron Man</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" onclick="q3Function(this.value)" id="inlineRadio2" value="Iron Woman">
+                                    <label class="form-check-label" for="inlineRadio2">Iron Woman</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" onclick="q3Function(this.value)" id="inlineRadio3" value="Thanos">
+                                    <label class="form-check-label" for="inlineRadio1">Thanos</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" onclick="q3Function(this.value)" id="inlineRadio4" value="Spider Man">
+                                    <label class="form-check-label" for="inlineRadio2">Spider Man</label>
+                                </div>
+                        </form>
+                        <br>
+                        <form id="form4">
+                            <h3>What is Captain America's sheild made of?</h3>
+                            <br>
+                            <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" onclick="q4Function(this.value)" id="inlineRadio1" value="Steel">
+                                    <label class="form-check-label" for="inlineRadio1">Steel</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" onclick="q4Function(this.value)" id="inlineRadio2" value="Bone">
+                                    <label class="form-check-label" for="inlineRadio2">Bone</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" onclick="q4Function(this.value)" id="inlineRadio3" value="Plastic">
+                                    <label class="form-check-label" for="inlineRadio1">Plastic</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" onclick="q4Function(this.value)" id="inlineRadio4" value="Vibranium">
+                                    <label class="form-check-label" for="inlineRadio2">Vibranium</label>
+                                </div>
+                        </form>
+                        <br>
+                        <form id="form5">
+                            <h3>How many Infinity Stones are there?</h3>
+                            <br>
+                            <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" onclick="q5Function(this.value)" id="inlineRadio1" value="five">
+                                    <label class="form-check-label" for="inlineRadio1">5</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" onclick="q5Function(this.value)" id="inlineRadio2" value="nine">
+                                    <label class="form-check-label" for="inlineRadio2">9</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" onclick="q5Function(this.value)" id="inlineRadio3" value="six">
+                                    <label class="form-check-label" for="inlineRadio1">6</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" onclick="q5Function(this.value)" id="inlineRadio4" value="four">
+                                    <label class="form-check-label" for="inlineRadio2">4</label>
+                                </div>
+                        </form>
+                    </div>
+                </div>
+                <!--Youtube video-->
+                <div class="row">
+                    <div class="col-md-12">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/F-1MQGhC9Fg?autoplay=1&amp;controls=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src="assets/javascript/app.js" type="text/javascript"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+
 </body>
+
 </html>
